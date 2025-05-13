@@ -35,6 +35,11 @@ class HomeActivity extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("University Ai") ,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(20)
+          )
+        ),
         elevation: 200,
         actions: [
           IconButton(onPressed:  (){
