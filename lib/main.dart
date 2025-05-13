@@ -49,9 +49,18 @@ class HomeActivity extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),
-      body: Center( // Optional: Center the body text
-        child: Text("Body"),
-      ),
+      body:  Text("Body"),
+      bottomNavigationBar: BottomNavigationBar(
+           onTap: (index){
+
+           },
+          items: [
+         BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+         BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: "Cart"),
+         BottomNavigationBarItem(icon: Icon(Icons.supervised_user_circle),label: "Account"),
+
+
+      ]),
     );
   }
 }
