@@ -49,6 +49,26 @@ class HomeActivity extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),
+      drawer:  Drawer(
+        child: ListView(
+           children: [
+              UserAccountsDrawerHeader(accountName: Text("Ashiqe"),
+                  accountEmail: Text("imashiqe@gmail.com"),
+                  currentAccountPicture: CircleAvatar(
+                     backgroundImage: NetworkImage("https://i.ibb.co/MFZVz4W/iamashiqe.jpg"),
+                  ),
+              ),
+              ListTile(
+                 leading: Icon(Icons.add),
+                title: Text("Add"),
+                onTap: (){
+                    Navigator.pop(context);
+                },
+              )
+           ],
+        ),
+
+      ),
       body:  Text("Body"),
       bottomNavigationBar: BottomNavigationBar(
            onTap: (index){
